@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reisboekingsformulier</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Reisboekingsformulier</h2>
+        <form id="booking-form">
+            <label for="first-name">Voornaam:</label>
+            <input type="text" id="first-name" name="first-name" pattern="[A-Za-z]+" required>
+
+            <label for="last-name">Achternaam:</label>
+            <input type="text" id="last-name" name="last-name" pattern="[A-Za-z]+" required>
+
+            <label for="gender">Geslacht:</label>
+            <select id="gender" name="gender" default="man">
+                <option value="man" selected>Man</option>
+                <option value="vrouw">Vrouw</option>
+            </select>
+
+            <label for="street">Straat met huisnummer:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" required>
+
+            <label for="city">Stad:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="country">Land:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="bsn">BSN-nummer:</label>
+            <input type="text" id="bsn" name="bsn" pattern="[0-9]{1,9}" required>
+
+            <label for="destination">Vakantieland:</label>
+            <select id="destination" name="destination">
+                <option value="Nederland">Nederland</option>
+                <option value="Frankrijk">Frankrijk</option>
+                <option value="Spanje">Spanje</option>
+                <!-- Voeg hier meer landen toe -->
+            </select>
+
+            <label for="departure-date">Datum van vertrek:</label>
+            <input type="date" id="departure-date" name="departure-date" min="2023-09-15" required>
+
+            <label for="return-date">Datum van terugkomst:</label>
+            <input type="date" id="return-date" name="return-date" min="2023-09-15" required>
+
+            <label for="travel-companions">Aantal reisgenoten (max 4):</label>
+            <input type="number" id="travel-companions" name="travel-companions" min="0" max="4" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" id="book-button">Boek nu</button>
+        </form>
+    </div>
+</body>
+</html>
